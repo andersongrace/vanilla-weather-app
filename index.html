@@ -13,9 +13,67 @@
     <title>Weather App</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Hello World</h1>
-      <a href="" class="btn btn-primary">Click Me</a>
+ <div class="container">
+      <div class="weather-app">
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Type a city.."
+                autofocus="on"
+                autocomplete="off"
+                id="city-input"
+                class="form-control shadow-sm"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm"
+              />
+              </div>
+          </div>
+        </form>
+        <h1 id="city">
+          Austin, TX
+        </h1>
+        <ul>
+          <li id="date">Tuesday 11:01am</li>
+          <li id="description">
+            Clear Skies
+          </li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <div class="clearfix">
+              <div class="float-left">
+                ☀️ <span class="temperature" id="temperature">89</span
+                ><span class="units">
+                  <a href="#" id="fahrenheit-link">°F |</a>
+                  <a href="#" id="celsius-link">°C</a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <ul>
+              <li>
+                Precipitation: 1%
+              </li>
+              <li>
+                Humidity: <span id="humidity">63%</span>
+              </li>
+              <li>
+                Wind: <span id="wind">13</span> mph
+              </li>
+            </ul>
+          </div>
+        </div>
+          </div>        
+      </div>
+      <small><a href="https://github.com/andersongrace/vanilla-weather-app" target="_blank">Open-source code</a> by Grace Anderson</small>
     </div>
     <script src="src/app.js"></script>
   </body>
