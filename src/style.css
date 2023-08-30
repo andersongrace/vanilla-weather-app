@@ -58,5 +58,10 @@ li {
 
 .weather-temperature .units {
     position: relative;
-    top: -32px;
+    top: 5px;
+}
+
+.note {
+    text-align: center;
+        
 }

@@ -31,14 +31,13 @@
         </div>
           <div class="row">
             <div class="col-6">
-              <div class="clearfix weather-temperature">
+              <div class="d-flex weather-temperature">
                 <img
                   src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
                   alt="clear"
-                  class="float-left"
+                  id="icon"
                 />
-                <div class="float-left">
-                <strong>89</strong><span class="units">°F | <a href="#">°C</a></span>
+                <strong id="temperature">89</strong><span class="units">°F | <a href="#">°C</a></span>
                 </div>
               </div>
             </div>
@@ -53,14 +52,14 @@
           </div>
         </div>
 
-        <small
+        <div class="note"><small
           ><a
             href="https://github.com/andersongrace/vanilla-weather-app"
             target="_blank"
             >Open-source code</a
           >
           by Grace Anderson</small
-        >
+        ></div>
       </div>
     </div>
     <script src="src/app.js"></script>
