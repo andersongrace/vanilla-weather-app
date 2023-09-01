@@ -22,6 +22,12 @@ function formatDate(timestamp) {
     return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+    let forecastELement = document.querySelector("#forecast");
+
+    forecastELement.innerHTML = "Forecast";
+}
+
 function displayTemperature(response) {
 let temperatureElement = document.querySelector("#temperature");
 let cityElement = document.querySelector("#city");
@@ -37,7 +43,7 @@ temperatureElement.innerHTML = Math.round
 cityElement.innerHTML = response.data.name;
 descriptionElement.innerHTML = response.data.weather[0].description;
 humidityElement.innerHTML = response.data.main.humidity;
-windElement.innerHTML = Math.round(response.data.main.wind.speed);
+windElement.innerHTML = Math.round(response.data.wind.speed);
 dateElement.innerHTML = formatDate(response.data.dt * 1000);
 iconElement.setAttribute(
     "src", 
@@ -59,6 +65,8 @@ function handleSubmit(event) {
     let cityInputElement = document.querySelector("#city-input")
     search(cityInputElement.value);
 }
+
+
 
 search("New York");
 
