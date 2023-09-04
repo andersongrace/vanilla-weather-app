@@ -1,3 +1,4 @@
+
 function formatDate(timestamp) {
    let date = new Date(timestamp);
    let hours = date.getHours();
@@ -25,7 +26,21 @@ function formatDate(timestamp) {
 function displayForecast() {
     let forecastELement = document.querySelector("#forecast");
 
-    forecastELement.innerHTML = "Forecast";
+    forecastELement.innerHTML = `
+    <div class="row">
+     <div class="col-2">
+      <div class="weather-forecast-date">Thur</div>
+      <img src="http://openweathermap.org/img/wn/50d@2x.png"
+      alt=""
+      width="42"
+      />
+      <div class="weather-forecast-temperatures">
+       <span class="weather-forecast-temperature-max"> 101° </span>
+       <span class="weather-forecast-temperature-min"> 73° </span>
+       </div>
+      </div>
+     </div> 
+    `
 }
 
 function displayTemperature(response) {
@@ -59,7 +74,6 @@ function search(city) {
 
 }
 
-
 function handleSubmit(event) {
     event.preventDefault();
     let cityInputElement = document.querySelector("#city-input")
@@ -67,8 +81,12 @@ function handleSubmit(event) {
 }
 
 
-
-search("New York");
+search("Austin");
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+
+
+
+
